@@ -36,4 +36,28 @@ Nalezy zdefiniowac obszar na ktorym zostanie wygenerowana podloga
 ![floor](https://github.com/macnack/rmf_raport/blob/main/resources/podloga.png)
 
 
-## Dodawnia 
+## Dodawnie scian i punktow
+
+Dodawanie scian i punktow:
+![sciana](https://github.com/macnack/rmf_raport/blob/main/resources/sciana_punkt.png)
+
+Po zaznaczeniu scian (niebieskie odcinki) zostaje tam wygenerowany ich model.
+Puntky sluza za punkty informacyjne dla robotow, np. ladowarka, nazwa pomieszczenia
+
+## Dodawanie sciezek
+
+Sciezki sluza jako strefa ruchu dla robotow mobilny
+![sciezki](https://github.com/macnack/rmf_raport/blob/main/resources/sciezki.png)
+
+## Generowanie mapy
+
+[generator mapy](https://github.com/open-rmf/rmf_demos/tree/main/rmf_demos_maps)
+W celu wygenerowania wlasnej mapy plik `xml` nalezy umiescic w folderze `maps`, a nastepnie zbudowac za pomoca komend:
+
+```
+mkdir build
+cd build
+cmake ..
+```
+
+Za pomoca skonfigurowanego przez producenta `CMakeLists.txt` otrzymuje sie wygenerowane modele, sciezki, oraz plik z punktami i sciazkami typu `yaml`
