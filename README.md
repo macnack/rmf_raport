@@ -25,6 +25,7 @@
 15. x
 16. x
 
+x - nie testowane podczas, brak zastosowanie
 ## Dodawanie wymiaru mapy
 
 W celu zwymiarowania mapy nalezy dodac `measurement`, w ich definicji nadaje sie rzeczywiste miary ( odcinki zaznaczone kolorem fioletowym )
