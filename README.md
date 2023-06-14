@@ -1,7 +1,63 @@
 # rmf_raport
 
 
+# RMF-DEMOS
+Repozytorium **rmf_demos** zawiera gotowe mapy lokacji oraz zadania, które może wykonywać flota robotów. Aby uruchomić przykładową mapę w narzędziach **rviz2** oraz **gazebo**, należy skorzystać z polecenia:
+```
+ros2 launch rmf_demos_gz_classic hotel.launch.xml 
+```
+![](https://github.com/macnack/rmf_raport/blob/main/resources/hotel_world.png)
 
+
+# RMF-TASK
+Biblioteka **rmf_task** zapewnia narzędzia i interfejsy do definiowania i zarządzania sekwencjami zadań dla robotów. Obejmuje między innymi:
+- `rmf_task::Task` - interfejs zawierający informacje dotyczące zadania/sekwencji zadań/modelu/akcji
+- `rmf_task::TaskPlanner` - interfejs odpowiedzialny za optymalne przydzielenie zadań pomiędzy robotami
+
+Obecnie dostępne są następujące typy zadań:
+- Bundle
+- DropOff
+- GoToPlace
+- PerformAction
+- PickUp
+- Placeholder
+- WaitFor
+
+W bibliotece **rmf_demos** mamy dostęp do gotowych sekwencji zadań, które można uruchomić poprzez wykonanie polecenia w terminalu:
+```
+ros2 run rmf_demos_tasks dispatch_patrol -p coe lounge -n 3 --use_sim_time
+```
+![](https://github.com/macnack/rmf_raport/blob/main/resources/loop_request.gif)
+
+Przykładowe ciało requestu w formacie JSON może wyglądać następująco:
+```
+{
+  "type": "robot_task_request",
+  "robot": "tinyRobot1",
+  "fleet": "tinyRobot",
+  "request": {
+    "category": "patrol",
+    "description": {
+      "places": ["pantry", "lounge"],
+      "rounds": 2
+    }
+  }
+}
+```
+- ```robot``` - nazwa robota
+- ```fleet``` - nazwa floty
+- ```category``` - typ zadania
+- ```description``` - w tym przypadku lista punktów do odwiedzenia oraz ilość powtórzeń
+
+#### RMF - Panel
+Do wysyłania zadań można również wykorzystać aplikację webową:
+![https://open-rmf.github.io/rmf-panel-js/](https://github.com/macnack/rmf_raport/blob/main/resources/rmf_panel.png)
+Wysyłanie żądań odbywa się poprzez wybór dozwolonych zadań z listy oraz określenie dodatkowych atrybutów zadania, które w ciele requestu znajdują się w polu ```description```.
+
+### Zarządzanie zadaniami
+Do przypisywania zadań biblioteka **rmf_open** wykorzystuje dyspozytora (dispatcher), którego sposób działania przedstawiony jest poniżej:
+![](https://github.com/macnack/rmf_raport/blob/main/resources/disp.png)
+Po inicjalizacji dyspozytor decyduje, na podstawie opisu oraz kosztu (```BidProposals```), do której floty oraz którego robota przypisać zadanie.
 # Tworzenie wlasnej mapy
 
 ## Toolbar
