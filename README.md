@@ -52,7 +52,7 @@ Sciezki sluza jako strefa ruchu dla robotow mobilny
 
 ## Dodawanie punktow `fiducials`
 
-W celu konstruowania wielowarstwowej mapy nalezy nalozyc punkty ktore beda, laczyc pietra 
+W celu konstruowania wielowarstwowej mapy nalezy nalozyc punkty ktore beda, laczyc pietra. Oznaczone jako m1, m2, m3
 ![punkty](https://github.com/macnack/rmf_raport/blob/main/resources/punkty_laczace.png)
 
 ## Generowanie mapy
