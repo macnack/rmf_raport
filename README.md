@@ -14,7 +14,7 @@
 4. Dodac punkta
 5. x
 6. x
-7. Dodawanie punktow referencyjnych dla map
+7. Dodawanie punktow referencyjnych dla map `fiducials`
 8. Dodawanie sciezek 
 9. Dodawnie scian
 10. x
@@ -49,6 +49,11 @@ Puntky sluza za punkty informacyjne dla robotow, np. ladowarka, nazwa pomieszcze
 
 Sciezki sluza jako strefa ruchu dla robotow mobilny
 ![sciezki](https://github.com/macnack/rmf_raport/blob/main/resources/sciezki.png)
+
+## Dodawanie punktow `fiducials`
+
+W celu konstruowania wielowarstwowej mapy nalezy nalozyc punkty ktore beda, laczyc pietra 
+![punkty](https://github.com/macnack/rmf_raport/blob/main/resources/punkty_laczace.png)
 
 ## Generowanie mapy
 
