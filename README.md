@@ -61,3 +61,8 @@ cmake ..
 ```
 
 Za pomoca skonfigurowanego przez producenta `CMakeLists.txt` otrzymuje sie wygenerowane modele, sciezki, oraz plik z punktami i sciazkami typu `yaml`
+
+
+## Plik uruchomieniowy
+
+W celu uruchomienia mapy nalezy skonfigurowac plik `launch`
