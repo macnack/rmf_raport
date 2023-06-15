@@ -128,3 +128,6 @@ Za pomoca skonfigurowanego przez producenta `CMakeLists.txt` otrzymuje sie wygen
 ## Plik uruchomieniowy
 
 W celu uruchomienia mapy nalezy skonfigurowac [plik](https://github.com/macnack/rmf_raport/blob/main/map_home2.launch.xml) `launch`, ktory umieszcza sie w [folderze](https://github.com/open-rmf/rmf_demos/tree/main/rmf_demos_gz/launch).
+
+## Film demonstracyjny
+[film demonstracyjny](https://drive.google.com/drive/folders/1bS8zznhJ821o93qN4pti-vwEe1Xr9ksD)
